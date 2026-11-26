@@ -52,6 +52,13 @@ export class EditDelivery extends Delivery {
     return button;
   }
 
+  static getTotalDistance(deliveries) {
+    return deliveries.reduce((sum, item) => {
+      if (item.status === 'canceled') return sum;
+      return sum + (+item.distance || 0);
+    }, 0);
+  }
+  
   render() {
     const cardEl = super.render();
 
