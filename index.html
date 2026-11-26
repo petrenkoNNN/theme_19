@@ -8,6 +8,27 @@
   </head>
   <body>
     <div class="deliveries"></div>
+
+    <div class="total">
+      <button class="button total-button" type="button">Общее расстояние</button>
+      <div class="total-result"></div>
+    </div>
+
+    <div class="modal">
+      <div class="modal-window">
+        <button class="modal-close" type="button" aria-label="Закрыть">&times;</button>
+        <h2 class="modal-title">Изменить</h2>
+        <form class="modal-form">
+          <input class="modal-input" type="text" name="name" placeholder="Имя" required>
+          <input class="modal-input" type="text" name="address" placeholder="Адрес" required>
+          <input class="modal-input" type="text" name="distance" placeholder="Расстояние, км" required>
+          <select class="modal-input modal-status" name="status" required></select>
+          <p class="modal-error"></p>
+          <button class="button modal-submit" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
